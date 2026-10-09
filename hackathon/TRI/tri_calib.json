@@ -1,0 +1,44 @@
+{
+  "_aide": "places : 6 points [x, y] (image 640x480), place 1 = la plus à gauche vue du robot, sur le liquide d'un tube rangé. table : coins de la zone où sont posés les tubes. fenetre_px : côté du carré mesuré sur chaque place. part_min : part du carré qui doit être de la couleur pour dire la place occupée. surface_min_px : surface minimale d'une tache de couleur sur la table. fusion_px : deux taches plus proches comptent pour un seul tube (étiquette). tube_px : [demi-largeur, hauteur au-dessus, hauteur au-dessous] du tube debout dans une place occupée, retiré de la zone de la table pour ne pas le compter deux fois. couleurs : teinte = plages de H OpenCV (0-179), s_min et v_min = saturation et luminosité minimales (0-255). Réglage : make tri-voir.",
+  "places": [
+    [484, 328],
+    [464, 344],
+    [441, 362],
+    [414, 379],
+    [384, 405],
+    [348, 431]
+  ],
+  "table": [
+    [268, 232],
+    [482, 230],
+    [540, 298],
+    [500, 305],
+    [475, 314],
+    [300, 436],
+    [285, 479],
+    [196, 479],
+    [214, 364]
+  ],
+  "fenetre_px": 15,
+  "part_min": 0.25,
+  "surface_min_px": 150,
+  "fusion_px": 35,
+  "tube_px": [12, 45, 15],
+  "couleurs": {
+    "B": {
+      "teinte": [[88, 107]],
+      "s_min": 120,
+      "v_min": 45
+    },
+    "J": {
+      "teinte": [[17, 29]],
+      "s_min": 160,
+      "v_min": 120
+    },
+    "R": {
+      "teinte": [[0, 7], [160, 179]],
+      "s_min": 120,
+      "v_min": 70
+    }
+  }
+}

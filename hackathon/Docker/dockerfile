@@ -1,0 +1,5 @@
+# Image du challenge + la seule dépendance de l'extra officiel lerobot[smolvla] qui y manque.
+# Sans num2words, le processeur SmolVLM (transformers) lève une ImportError au chargement de SmolVLA.
+ARG BASE_IMAGE=ghcr.io/alsacedigitale/robotkraft:latest
+FROM ${BASE_IMAGE}
+RUN uv pip install --python /workspace/.venv/bin/python "num2words>=0.5.14,<0.6.0"
